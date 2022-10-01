@@ -11,7 +11,7 @@ async function main() {
   const ERC721Proxy = await hre.ethers.getContractFactory("ERC721Proxy");
   const ERC721ProxyDeploy = await ERC721Proxy.deploy();
 
-  await lock.deployed();
+  await ERC721ProxyDeploy.deployed();
 
   console.log(
     `ERC721Proxy deployed to ${ERC721ProxyDeploy.address}`
