@@ -26,7 +26,7 @@ contract ERC721Proxy is ERC721, ERC721URIStorage {
     // constructor(string memory _name, string memory _symbol, string memory _uri) ERC721(_name, _symbol) {
     //     baseURI = _uri;
     // }
-    constructor() ERC721("DevSnek", "DSN") {
+    constructor(string memory _name, string memory _symbol) ERC721(_name, _symbol) {
         baseURI = "ipfs://QmNVL1r5C3w3aWMFegE7HgD4LAeEsXCvgXS5Hcydizt1ku";
     }
 

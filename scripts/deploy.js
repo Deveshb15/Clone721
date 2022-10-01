@@ -18,7 +18,7 @@ async function main() {
   // );
 
   const ERC721Factory = await hre.ethers.getContractFactory("ERC721Factory")
-  const ERC721FactoryDeploy = await ERC721Factory.deploy("0xad4a66233Cc1EC3c8D05cB785Bb3e3b96C06047b")
+  const ERC721FactoryDeploy = await ERC721Factory.deploy()
 
   await ERC721FactoryDeploy.deployed()
   
