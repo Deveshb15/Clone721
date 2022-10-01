@@ -8,14 +8,23 @@ const hre = require("hardhat");
 
 async function main() {
 
-  const ERC721Proxy = await hre.ethers.getContractFactory("ERC721Proxy");
-  const ERC721ProxyDeploy = await ERC721Proxy.deploy();
+  // const ERC721Proxy = await hre.ethers.getContractFactory("ERC721Proxy");
+  // const ERC721ProxyDeploy = await ERC721Proxy.deploy();
 
-  await ERC721ProxyDeploy.deployed();
+  // await ERC721ProxyDeploy.deployed();
 
+  // console.log(
+  //   `ERC721Proxy deployed to ${ERC721ProxyDeploy.address}`
+  // );
+
+  const ERC721Factory = await hre.ethers.getContractFactory("ERC721Factory")
+  const ERC721FactoryDeploy = await ERC721Factory.deploy("0xad4a66233Cc1EC3c8D05cB785Bb3e3b96C06047b")
+
+  await ERC721FactoryDeploy.deployed()
+  
   console.log(
-    `ERC721Proxy deployed to ${ERC721ProxyDeploy.address}`
-  );
+    `ERC721Factory deployed to ${ERC721FactoryDeploy.address}`
+  )
 }
 
 // We recommend this pattern to be able to use async/await everywhere
